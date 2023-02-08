@@ -22,10 +22,17 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
 
-        registry.addMapping("/**");
+        registry.addMapping("/**").allowedOrigins("https://portfolio-nuevo.web.app");;
 
     }
 
-   
+   @Override
+    public void configure(WebSecurity web) throws Exception {
+        super.configure(web);
+    }  
 
 }
+ 
+ 
+
+    

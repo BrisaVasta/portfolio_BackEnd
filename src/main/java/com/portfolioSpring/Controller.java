@@ -23,10 +23,11 @@ import com.portfolioSpring.entity.ExpLaboral;
 import com.portfolioSpring.entity.Proyecto;
 import com.portfolioSpring.entity.Skill;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @RestController
 
-@CrossOrigin(origins = "https://portfolio-nuevo.web.app")
+@CrossOrigin(origins = "https://portfolio-nuevo.web.app", methods= {RequestMethod.GET,RequestMethod.POST})
 //@CrossOrigin(origins = "http://localhost:4200")
 public class Controller {
 

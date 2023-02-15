@@ -35,24 +35,18 @@ public class Controller {
     @Autowired
     private UserDao userDao;
     @Autowired
-    private ProyectoDao proyDao;
-    @Autowired
     private EducacionDao educDao;
-    @Autowired
-    private ExpLaboralDao expLaboralDao;
-    @Autowired
-    private SkillDao skillDao;
-    
+
 
     
 
  
-    @GetMapping("/verPersona/{id}")
+    @GetMapping("/persona/verPersona/{id}")
     public Persona verPersona(@PathVariable int id) {
         return persoServ.findById(id).orElse(null);
     }
  
-    @PutMapping("/editarPersona")
+    @PutMapping("/persona/editarPersona")
     public void editarPersona(@RequestBody Persona p){
         persoServ.save(p);
         
@@ -126,92 +120,9 @@ public class Controller {
     
     //---------------------------------------------------
 
-    @GetMapping("/api/verExperiencias")
-    @ResponseBody
-    public List<ExpLaboral> verExperiencias() {
-        return (expLaboralDao.findAll());
-    }
 
 
-    @PostMapping("/api/agregarExperiencia")
-    public void agregarExperiencia(@RequestBody ExpLaboral e) {
-        expLaboralDao.save(e);
-    }
-    
-    @GetMapping("/api/traerExperiencia/{id}")
-    public ExpLaboral traerExperiencia(@PathVariable int id) {
-        return expLaboralDao.findById(id).orElse(null);
-    }
-
-    @PutMapping("/api/editarExperiencia/{id}")
-    public void editarExperiencia(@PathVariable int id,@RequestBody ExpLaboral e) {
-        expLaboralDao.save(e);
-    }
-
-    @DeleteMapping("/api/borrarExperiencia/{id}")
-    public void borrarExperiencia(@PathVariable int id) {
-        expLaboralDao.deleteById(id);
-    }
-    
    
-    //---------------------------------------------------1
-
-    @GetMapping("/api/verProyectos")
-    @ResponseBody
-    public List<Proyecto> verProyectos() {
-        return (proyDao.findAll());
-    }
-
-
-    @PostMapping("/api/agregarProyecto")
-    public void agregarProyecto(@RequestBody Proyecto p) {
-        proyDao.save(p);
-    }
-
-    @GetMapping("/api/traerProyecto/{id}")
-    public Proyecto traerProyecto(@PathVariable int id) {
-        return proyDao.findById(id).orElse(null);
-    }
-    @PutMapping("/api/editarProyecto/{id}")
-    public void editarProyecto(@PathVariable int id,@RequestBody Proyecto p) {
-        proyDao.save(p);
-    }
-
-    @DeleteMapping("/api/borrarProyecto/{id}")
-    public void borrarProyecto(@PathVariable int id) {
-        proyDao.deleteById(id);
-    }
-
-    //---------------------------------------------------
-
-    @GetMapping("/api/verSkills")
-    @ResponseBody
-    public List<Skill> verSkills() {
-        return (skillDao.findAll());
-    }
-
-
-    @PostMapping("/api/agregarSkill")
-    public void agregarSkill(@RequestBody Skill s) {
-        skillDao.save(s);
-    }
-
-    @GetMapping("/api/traerSkill/{id}")
-    public Skill traerSkill(@PathVariable int id) {
-        return skillDao.findById(id).orElse(null);
-    }
-    
-    @PutMapping("/api/editarSkill/{id}")
-    public void editarSkill(@PathVariable int id, @RequestBody Skill s) {
-        skillDao.save(s);
-    }
-
-    @DeleteMapping("/api/borrarSkill/{id}")
-    public void borrarSkill(@PathVariable int id) {
-        skillDao.deleteById(id);
-    }
-}
-
 
 
 

@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 public class Controller {
 
     @Autowired
-    private PersonaDao persoServ;
+    private PersonaDao persoServ; 
     @Autowired
     private UserDao userDao;
     @Autowired

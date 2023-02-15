@@ -48,12 +48,12 @@ public class Controller {
     
 
  
-    @GetMapping("/persona/verPersona/{id}")
+    @GetMapping("persona/verPersona/{id}")
     public Persona verPersona(@PathVariable int id) {
         return persoServ.findById(id).orElse(null);
     }
  
-    @PutMapping("/persona/editarPersona")
+    @PutMapping("persona/editarPersona")
     public void editarPersona(@RequestBody Persona p){
         persoServ.save(p);
         

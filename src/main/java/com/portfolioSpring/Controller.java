@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @RestController
 
-@CrossOrigin(origins = "https://portfolio-brisa-vasta.web.app", methods= {RequestMethod.GET,RequestMethod.POST})
+@CrossOrigin(origins = "https://portfolio-nuevo.web.app", methods= {RequestMethod.GET,RequestMethod.POST})
 //@CrossOrigin(origins = "http://localhost:4200")
 public class Controller {
 

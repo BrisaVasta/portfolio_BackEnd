@@ -1,9 +1,8 @@
 package com.portfolioSpring;
 
+
 import com.portfolioSpring.dao.EducacionDao;
 import com.portfolioSpring.dao.ExpLaboralDao;
-import com.portfolioSpring.entity.Persona;
-import com.portfolioSpring.entity.User;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,8 +19,10 @@ import com.portfolioSpring.dao.SkillDao;
 import com.portfolioSpring.dao.UserDao;
 import com.portfolioSpring.entity.Educacion;
 import com.portfolioSpring.entity.ExpLaboral;
+import com.portfolioSpring.entity.Persona;
 import com.portfolioSpring.entity.Proyecto;
 import com.portfolioSpring.entity.Skill;
+import com.portfolioSpring.entity.User;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
@@ -47,12 +48,12 @@ public class Controller {
     
 
  
-    @GetMapping("/verPersona/{id}")
+    @GetMapping("persona/verPersona/{id}")
     public Persona verPersona(@PathVariable int id) {
         return persoServ.findById(id).orElse(null);
     }
  
-    @PutMapping("/editarPersona")
+    @PutMapping("persona/editarPersona")
     public void editarPersona(@RequestBody Persona p){
         persoServ.save(p);
         

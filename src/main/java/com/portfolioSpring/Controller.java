@@ -62,35 +62,35 @@ public class Controller {
    
 
     //----------------------------------------------------
-    @PostMapping("/api/login")
+    @PostMapping("login")
     @ResponseBody
     public User login(@RequestBody User u) {
         return userDao.findByUsernameAndPassword(u.getUsername(), u.getPassword());
     }
 
-    @GetMapping("/api/getUser/{id}")
+    @GetMapping("login/getUser/{id}")
     @ResponseBody
     public User getUser(@PathVariable int id) {
         return (userDao.findById(id).orElse(null));
     }
 
-    @GetMapping("/api/verUsers")
+    @GetMapping("/login/verUsers")
     @ResponseBody
     public List<User> verUsers() {
         return userDao.findAll();
     }
 
-    @PostMapping("/api/agregarUser")
+    @PostMapping("login/agregarUser")
     public void agregarUser(@RequestBody User u) {
         userDao.save(u);
     }
 
-    @PutMapping("/api/editarUser") 
+    @PutMapping("login/editarUser") 
     public void editarUser(@RequestBody User u) {
         userDao.save(u);
     }
 
-    @DeleteMapping("/api/borrarUser")
+    @DeleteMapping("login/borrarUser")
     @ResponseBody
     public void borrarUser(@RequestBody User u) {
         userDao.delete(u);
@@ -127,29 +127,29 @@ public class Controller {
     
     //---------------------------------------------------
 
-    @GetMapping("/api/verExperiencias")
+    @GetMapping("experiencia/verExperiencias")
     @ResponseBody
     public List<ExpLaboral> verExperiencias() {
         return (expLaboralDao.findAll());
     }
 
 
-    @PostMapping("/api/agregarExperiencia")
+    @PostMapping("experiencia/agregarExperiencia")
     public void agregarExperiencia(@RequestBody ExpLaboral e) {
         expLaboralDao.save(e);
     }
     
-    @GetMapping("/api/traerExperiencia/{id}")
+    @GetMapping("experiencia/traerExperiencia/{id}")
     public ExpLaboral traerExperiencia(@PathVariable int id) {
         return expLaboralDao.findById(id).orElse(null);
     }
 
-    @PutMapping("/api/editarExperiencia/{id}")
+    @PutMapping("experiencia/editarExperiencia/{id}")
     public void editarExperiencia(@PathVariable int id,@RequestBody ExpLaboral e) {
         expLaboralDao.save(e);
     }
 
-    @DeleteMapping("/api/borrarExperiencia/{id}")
+    @DeleteMapping("experiencia/borrarExperiencia/{id}")
     public void borrarExperiencia(@PathVariable int id) {
         expLaboralDao.deleteById(id);
     }
@@ -157,57 +157,57 @@ public class Controller {
    
     //---------------------------------------------------1
 
-    @GetMapping("/api/verProyectos")
+    @GetMapping("proyecto/verProyectos")
     @ResponseBody
     public List<Proyecto> verProyectos() {
         return (proyDao.findAll());
     }
 
 
-    @PostMapping("/api/agregarProyecto")
+    @PostMapping("proyecto/agregarProyecto")
     public void agregarProyecto(@RequestBody Proyecto p) {
         proyDao.save(p);
     }
 
-    @GetMapping("/api/traerProyecto/{id}")
+    @GetMapping("proyecto/traerProyecto/{id}")
     public Proyecto traerProyecto(@PathVariable int id) {
         return proyDao.findById(id).orElse(null);
     }
-    @PutMapping("/api/editarProyecto/{id}")
+    @PutMapping("proyecto/editarProyecto/{id}")
     public void editarProyecto(@PathVariable int id,@RequestBody Proyecto p) {
         proyDao.save(p);
     }
 
-    @DeleteMapping("/api/borrarProyecto/{id}")
+    @DeleteMapping("proyecto/borrarProyecto/{id}")
     public void borrarProyecto(@PathVariable int id) {
         proyDao.deleteById(id);
     }
 
     //---------------------------------------------------
 
-    @GetMapping("/api/verSkills")
+    @GetMapping("skill/verSkills")
     @ResponseBody
     public List<Skill> verSkills() {
         return (skillDao.findAll());
     }
 
 
-    @PostMapping("/api/agregarSkill")
+    @PostMapping("skill/agregarSkill")
     public void agregarSkill(@RequestBody Skill s) {
         skillDao.save(s);
     }
 
-    @GetMapping("/api/traerSkill/{id}")
+    @GetMapping("skill/traerSkill/{id}")
     public Skill traerSkill(@PathVariable int id) {
         return skillDao.findById(id).orElse(null);
     }
     
-    @PutMapping("/api/editarSkill/{id}")
+    @PutMapping("skill/editarSkill/{id}")
     public void editarSkill(@PathVariable int id, @RequestBody Skill s) {
         skillDao.save(s);
     }
 
-    @DeleteMapping("/api/borrarSkill/{id}")
+    @DeleteMapping("skill/borrarSkill/{id}")
     public void borrarSkill(@PathVariable int id) {
         skillDao.deleteById(id);
     }

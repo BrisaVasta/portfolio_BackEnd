@@ -33,7 +33,7 @@ import com.portfolioSpring.entity.Skill;
 
 @RestController
 
-@CrossOrigin(origins = "https://portfolio-nuevo.web.app", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
+@CrossOrigin(origins = "https://portfolio-brisa-vasta.web.app", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 //@CrossOrigin(origins = "http://localhost:4200")
 public class Controller {
 

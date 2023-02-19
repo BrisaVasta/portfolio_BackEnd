@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.portfolioSpring.PortfolioSpringTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.527 s - in com.portfolioSpring.PortfolioSpringTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.597 s - in com.portfolioSpring.PortfolioSpringTest

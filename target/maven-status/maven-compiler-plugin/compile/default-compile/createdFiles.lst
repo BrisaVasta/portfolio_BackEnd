@@ -1,15 +1,1 @@
-com\portfolioSpring\dao\ProyectoDao.class
-com\portfolioSpring\dao\UserDao.class
-com\portfolioSpring\WebConfig.class
-com\portfolioSpring\dao\PersonaDao.class
-com\portfolioSpring\entity\ExpLaboral.class
-com\portfolioSpring\PortfolioMain.class
-com\portfolioSpring\entity\Persona.class
-com\portfolioSpring\entity\User.class
 com\portfolioSpring\Controller.class
-com\portfolioSpring\entity\Educacion.class
-com\portfolioSpring\dao\SkillDao.class
-com\portfolioSpring\entity\Proyecto.class
-com\portfolioSpring\dao\EducacionDao.class
-com\portfolioSpring\entity\Skill.class
-com\portfolioSpring\dao\ExpLaboralDao.class
